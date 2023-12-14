@@ -25,6 +25,25 @@ const imageData = ()=>{
 
 function App() {
   // code here
+    let image_arr = imageData()
+
+  return (
+    <>
+      <h1>Kalvium Gallery😎</h1>
+      <div className='parent'>
+          <img src={image_arr[0].img} className='Hathi' alt="" />
+          <img src={image_arr[0].img} className='Hathi' alt="" />
+          <img src={image_arr[0].img} className='Hathi' alt="" />
+          <img src={image_arr[0].img} className='Hathi' alt="" />
+          <img src={image_arr[0].img} className='Hathi' alt="" />
+          <img src={image_arr[0].img} className='Hathi' alt="" />
+      </div>
+      <div className='foot'>
+      <h1>Something</h1>
+      </div>
+      </>
+    )
+
 }
 
 export default App;
