@@ -24,26 +24,28 @@ const imageData = ()=>{
 }
 
 function App() {
-  // code here
-    let image_arr = imageData()
-
-  return (
-    <>
-      <h1>Kalvium Gallery😎</h1>
-      <div className='parent'>
-          <img src={image_arr[0].img} className='Hathi' alt="" />
-          <img src={image_arr[0].img} className='Hathi' alt="" />
-          <img src={image_arr[0].img} className='Hathi' alt="" />
-          <img src={image_arr[0].img} className='Hathi' alt="" />
-          <img src={image_arr[0].img} className='Hathi' alt="" />
-          <img src={image_arr[0].img} className='Hathi' alt="" />
-      </div>
-      <div className='foot'>
-      <h1>Something</h1>
-      </div>
-      </>
+  let img_Arr = imageData();
+return (<div>
+<h1>
+ Kalvium Gallery
+</h1>
+{/* <div className='gallery'>
+<img src={img_Arr[0].img} className='image'/>
+<img src={img_Arr[1].img} className='image'/>
+<img src={img_Arr[2].img} className='image'/>
+<img src={img_Arr[3].img} className='image'/>
+</div> */}
+<div className='parent'>
+{
+  img_Arr.map(elem=>{
+    return(
+    <img src={elem.img} className='image' />
     )
-
+  })
+}
+</div>
+</div>
+);
 }
 
 export default App;
